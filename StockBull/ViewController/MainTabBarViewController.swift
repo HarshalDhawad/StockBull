@@ -19,7 +19,7 @@ class MainTabViewController: UITabBarController {
         let homeViewController = createNavController(
             viewController: HomeViewController(),
             title: "Home",
-            imageName: "house.fill"
+            imageName: "house"
         )
         
         let xploreViewController = createNavController(
