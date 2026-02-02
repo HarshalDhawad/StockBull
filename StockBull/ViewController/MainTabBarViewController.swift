@@ -46,6 +46,7 @@ class MainTabViewController: UITabBarController {
     private func createNavController(viewController: UIViewController, title: String, imageName: String) -> UIViewController {
         viewController.title = title
         
+        
         let navViewController = UINavigationController(rootViewController: viewController)
         
         // Set the Tab Bar Item specifically for the Navigation Controller
