@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
         btn.layer.borderColor = UIColor.black.cgColor
         btn.layer.cornerRadius = 15
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.addTarget(self, action: #selector(openBuyAndSellViewController(_:)), for: .touchUpInside)
         return btn
     }()
     
@@ -35,6 +36,7 @@ class HomeViewController: UIViewController {
         btn.layer.borderColor = UIColor.black.cgColor
         btn.layer.cornerRadius = 15
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.addTarget(self, action: #selector(openBuyAndSellViewController(_:)), for: .touchUpInside)
         return btn
     }()
     
@@ -139,4 +141,18 @@ class HomeViewController: UIViewController {
                 seeMore.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             ])
         }
+    
+    @objc func openBuyAndSellViewController(_ sender: UIButton) {
+        let presentViewController: UIViewController!
+        if let title = sender.titleLabel?.text, let navigationController = self.navigationController {
+            if title.isEqual("Sell") {
+                presentViewController = BuyAndSellViewController(type: "Sell")
+                navigationController.pushViewController(presentViewController, animated: true)
+            } else {
+                presentViewController = BuyAndSellViewController(type: "Buy")
+                navigationController.pushViewController(presentViewController, animated: true)
+            }
+            
+        }
+    }
 }
