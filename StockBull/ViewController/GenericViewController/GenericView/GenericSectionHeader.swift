@@ -48,10 +48,10 @@ class GenericSectionHeader: UICollectionReusableView {
         stackView.addArrangedSubview(imageView)
         
         addSubview(stackView)
-        
-        
+
         NSLayoutConstraint.activate([
-            stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor)
         ])
     }
     

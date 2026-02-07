@@ -93,8 +93,9 @@ class GenericCollectionViewCell: UICollectionViewCell {
             stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
-
             
+            priceBadge.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+
             iconImageView.widthAnchor.constraint(equalToConstant: 40),
             iconImageView.heightAnchor.constraint(equalToConstant: 40)
         ])

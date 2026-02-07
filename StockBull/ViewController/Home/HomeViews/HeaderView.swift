@@ -12,7 +12,7 @@ class HeaderView: UIView {
     
     private let iconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "AmazonLogo")
+        imageView.image = UIImage(systemName: "person.crop.circle.fill")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         return imageView
@@ -72,7 +72,8 @@ class HeaderView: UIView {
             notificationImageView.widthAnchor.constraint(equalToConstant: 30),
             notificationImageView.heightAnchor.constraint(equalToConstant: 30),
             iconImageView.widthAnchor.constraint(equalToConstant: 40),
-            iconImageView.heightAnchor.constraint(equalToConstant: 40)
+            iconImageView.heightAnchor.constraint(equalToConstant: 40),
+            notificationImageView.trailingAnchor.constraint(equalTo: iconImageView.leadingAnchor, constant: -10)
         ])
     }
 }
